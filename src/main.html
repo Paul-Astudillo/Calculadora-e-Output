@@ -1,0 +1,36 @@
+<h1>Hola mundo {{name}} , {{asignatura}}</h1>
+
+<h2>Vamos hacer una</h2>
+
+<label for="input1">Numero A:</label>
+<input type="text" id="input1" [(ngModel)]="a" />
+<br />
+<label for="input2">Numero B :</label>
+<input type="text" id="input2" [(ngModel)]="b" />
+
+<br />
+
+El Valor de a es {{a}}
+<br />
+El Valor de b es {{b}}
+<br />
+El Valor de r es {{r}}
+
+<p>Resultado de la Suma es:</p>
+<button (click)="calcular()">Calcular la Suma</button>
+{{r}}
+
+<p>Resultado de la Resta es:</p>
+<button (click)="resta()">Calcular la Suma</button>
+{{r}}
+
+<hr />
+<h2>Ahora vamos hacer el ejemplo del Output</h2>
+
+<!-- Creamos una lista ul y le llamamos a nuestra variable items que es un array y se muestra la lista -->
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
+<!-- Ahora agregamos elementos a la lista con un componente-->
+
+<app-mensaje (newItemEvent)="addItem($event)"></app-mensaje>
